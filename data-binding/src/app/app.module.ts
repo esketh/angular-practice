@@ -3,10 +3,16 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
+import { HeroDetailComponent } from './hero-detail/hero-detail.component';
+import { PrefixPipe } from './pipe/prefix.pipe';
+import { DelayDirective } from './directive/delay.directive';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeroDetailComponent,
+    PrefixPipe,
+    DelayDirective
   ],
   imports: [
     BrowserModule,
