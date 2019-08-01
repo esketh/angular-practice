@@ -11,13 +11,18 @@ export class AppComponent {
   heroes: Hero[] = [
   { name: "Bombasto", address: "NYC", superpower: "can explode" },
   { name: "Iceman", address: "NYC", superpower: "can froze" },
-  { name: "Captain Planet", address: "Budapest", superpower: "can save the Earth" },
+  { name: "Captain Planet", address: "Budapest", superpower: "homoalcoholicus" },
+  { name: "Magneto", address: "NYC", superpower: "magnetic"},
   ];
 
   selectedHero: Hero = this.heroes[0];
 
   selectHero(hero : Hero): void {
     this.selectedHero = hero;
+  }
+
+  heroChanged(hero : Hero): void {
+    console.log('Changed hero:', hero);
   }
   // myHero : Hero = {
   //   name: 'Magneto',

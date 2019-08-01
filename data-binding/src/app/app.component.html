@@ -17,20 +17,24 @@
 <h1>Heroes</h1>
 
 <div class="row">
- <div class="col-12">
-   <div>
+   <div class="col-3">
      {{ heroes[0].name}}
-     <button class="btn btn-info" (click)="selectHero(heroes[0])">select</button>
+     <button class="btn btn-info btn-sm" (click)="selectHero(heroes[0])">select</button>
    </div>
-   <div>
+   <div class="col-3">
      {{ heroes[1].name}}
-     <button class="btn btn-info" (click)="selectHero(heroes[1])">select</button>
+     <button class="btn btn-info btn-sm" (click)="selectHero(heroes[1])">select</button>
     </div>
-   <div>
+   <div class="col-3">
      {{ heroes[2].name}}
-     <button class="btn btn-info" (click)="selectHero(heroes[2])">select</button>
+     <button class="btn btn-info btn-sm" (click)="selectHero(heroes[2])">select</button>
     </div>
-  </div>
+    <div class="col-3">
+        {{ heroes[3].name}}
+        <button class="btn btn-info btn-sm" (click)="selectHero(heroes[3])">select</button>
+       </div>
  </div> 
- <app-hero-detail [hero]="selectedHero"></app-hero-detail>
+ <br>
+ <app-hero-detail [hero]="selectedHero" (onChange)="heroChanged($event)"></app-hero-detail>
 </div>
+

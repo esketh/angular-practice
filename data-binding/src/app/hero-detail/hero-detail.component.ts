@@ -15,4 +15,7 @@ export class HeroDetailComponent implements OnInit {
   ngOnInit() {
   }
 
+  changeTrigger(): void {
+    this.onChange.emit(this.hero);
+  }
 }
