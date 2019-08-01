@@ -8,15 +8,26 @@ import { Hero } from './model/hero';
 })
 export class AppComponent {
   title: string = 'angular-practice-001';
-  myHero : Hero = {
-    name: 'Magneto',
-    address: 'NYC',
-    superpower: 'magnetic'
+  heroes: Hero[] = [
+  { name: "Bombasto", address: "NYC", superpower: "can explode" },
+  { name: "Iceman", address: "NYC", superpower: "can froze" },
+  { name: "Captain Planet", address: "Budapest", superpower: "can save the Earth" },
+  ];
+
+  selectedHero: Hero = this.heroes[0];
+
+  selectHero(hero : Hero): void {
+    this.selectedHero = hero;
+  }
+  // myHero : Hero = {
+  //   name: 'Magneto',
+  //   address: 'NYC',
+  //   superpower: 'magnetic'
   };
 
   // getName():string {
   //   return `Bond, James Bond`;
-  }
+  //}
 
 // names: string[] = [
 //   'Sanyi',

@@ -1,14 +1,36 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
+<!-- <div style="text-align:center">
   <h1>
     Welcome to {{ title }}!
   </h1>
-<!-- <p class="name">
+<p class="name">
   My name is: {{ getName() }}!
 </p>
 <input [(ngModel)]="name" type="text" [disabled]="disabled">
 
-<button (click)="setName('Dani')">Click me!</button> -->
+<button (click)="setName('Dani')">Click me!</button>
 </div>
 <h2>Hero detail</h2>
-<app-hero-detail [hero]="myHero"></app-hero-detail>
+<app-hero-detail [hero]="myHero"></app-hero-detail> -->
+
+<div class="container">
+<h1>Heroes</h1>
+
+<div class="row">
+ <div class="col-12">
+   <div>
+     {{ heroes[0].name}}
+     <button class="btn btn-info" (click)="selectHero(heroes[0])">select</button>
+   </div>
+   <div>
+     {{ heroes[1].name}}
+     <button class="btn btn-info" (click)="selectHero(heroes[1])">select</button>
+    </div>
+   <div>
+     {{ heroes[2].name}}
+     <button class="btn btn-info" (click)="selectHero(heroes[2])">select</button>
+    </div>
+  </div>
+ </div> 
+ <app-hero-detail [hero]="selectedHero"></app-hero-detail>
+</div>
