@@ -1,4 +1,46 @@
-.card-footer a {
+a {
   color: #FFF;
-  text-decoration: none;
+}
+
+.dashboard-header {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.no-padding {
+  padding: 0px;
+}
+
+hr {
+  margin: 0;
+  width: 100%;
+}
+
+
+.dashboard-icon-1 {
+  margin-right: 15px;
+}
+
+.dashboard-icon-2 {
+  margin-left: 15px;
+}
+
+.dashboard-icon-1,
+.dashboard-icon-2 {
+  border-radius: 10px;
+}
+
+
+
+
+@media screen and (max-width: 767px) {
+  .col-12 {
+    text-align: center !important;
+  }
+
+  .dashboard-icon-1,
+  .dashboard-icon-2 {
+    margin: 0;
+  }
+
 }

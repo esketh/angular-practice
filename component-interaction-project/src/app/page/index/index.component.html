@@ -2,7 +2,7 @@
   <title>{{title}}</title>
 </head>
 
-<div class="container">
+<div class="container ">
   <div class="row">
     <div class="col-12 text-center">
       <h1>{{title}}</h1>
@@ -10,37 +10,43 @@
   </div>
 </div>
 
-<div class="container">
-  <div class="row">
-    <div class="col-12 col-md-6">
-      <div class="card-header">
-        Employee Number
+<div class="container ">
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-5 dashboard-icon-1 bg-primary">
+      <div class="dashboard-header">
+        Current number of employees: {{employeeData.length}}
       </div>
-      <div class="card-body">
-        <p>{{employeeData.length}}</p>
+      <hr class="margin-bottom--none">
+      <div class="dashboard-link">
+
+        <a class="nav-link"
+           routerLink="/employee">
+          <div class="row ">
+            <div class="col-12 col-md-6 text-left no-padding">View Details</div>
+            <div class="col-12 col-md-6 text-right no-padding">></div>
+          </div>
+        </a>
       </div>
-      <div class="card-footer">
-        <button class="btn btn-primary">
-          <a class="nav-link"
-             routerLink="/employee">View Details</a>
-        </button>
-      </div>
+
     </div>
 
-    <div class="col-12 col-md-6">
-      <div class="card-header">
-        Bill Number
+    <div class="col-12 col-md-5 dashboard-icon-2 bg-warning">
+      <div class="dashboard-header">
+        Current number of bills: {{billData.length}}
       </div>
-      <div class="card-body">
-        <p>{{billData.length}}</p>
+      <hr class="margin-bottom--none">
+      <div class="dashboard-link">
+
+        <a class="nav-link"
+           routerLink="/bill">
+          <div class="row">
+            <div class="col-12 col-md-6 text-left no-padding">View Details</div>
+            <div class="col-12 col-md-6 text-right no-padding">></div>
+          </div>
+        </a>
       </div>
 
-      <div class="card-footer">
-        <button class="btn btn-primary">
-          <a class="nav-link"
-             routerLink="/bill">View Details</a>
-        </button>
-      </div>
+
     </div>
   </div>
 </div>
