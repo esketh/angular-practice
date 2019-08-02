@@ -11,13 +11,15 @@ export class EmployeeComponent implements OnInit {
 @Input() employee: Employee;
 @Input() data: MockData;
 
-  title: string = 'Employees'
-
-  data: MockData = new MockData();
+  title: string = 'Employees';
   
-  constructor() { }
+  
 
+  constructor() { }
+ 
   ngOnInit() {
+  let md: MockData = new MockData();
+  let employees: Employee[] = md.employee;
   }
 
 }
