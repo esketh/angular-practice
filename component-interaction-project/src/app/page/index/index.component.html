@@ -1,7 +1,50 @@
-<p>index works!</p>
-
-
-
+<head>
+    <title>{{title}}</title>
+  </head>
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h1>{{title}}</h1>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-6">
+        <div class="card-header">
+          Employee Number
+        </div>
+        <div class="card-body">
+          <p>{{employeeData.length}}</p>
+        </div>
+        <div class="card-footer">
+          <button class="btn btn-primary">
+            <a class="nav-link"
+               routerLink="/employee">View Details</a>
+          </button>
+        </div>
+      </div>
+  
+      <div class="col-12 col-md-6">
+        <div class="card-header">
+          Bill Number
+        </div>
+        <div class="card-body">
+          <p>{{billData.length}}</p>
+        </div>
+  
+        <div class="card-footer">
+          <button class="btn btn-primary">
+            <a class="nav-link"
+               routerLink="/bill">View Details</a>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
 
 <!-- 
 <button (click)="showModal()" class="btn btn-primary btn-lg">Show Modal Window</button>
