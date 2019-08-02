@@ -17,41 +17,12 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td><input></td>
-      <td><input></td>
-      <td><input></td>
-      <td><input></td>
-      <td><input></td>
+    <tr *ngFor="let bill of bills">
+      <td><input type="text" [(ngModel)]="bill._id"></td>
+      <td><input type="checkbox" class="form-check-input" [(ngModel)]="bill.paid"></td>
+      <td><input [(ngModel)]="bill.amount"></td>
+      <td><input [(ngModel)]="bill.customer"></td>
+      <td><input [(ngModel)]="bill.created"></td>
     </tr>
-    <tr>
-      <td><input></td>
-      <td><input></td>
-      <td><input></td>
-      <td><input></td>
-      <td><input></td>
-    </tr>
-    <tr>
-      <td><input></td>
-      <td><input></td>
-      <td><input></td>
-      <td><input></td>
-      <td><input></td>
-    </tr>
-    <tr>
-      <td><input></td>
-      <td><input></td>
-      <td><input></td>
-      <td><input></td>
-      <td><input></td>
-    </tr>
-    <tr>
-      <td><input></td>
-      <td><input></td>
-      <td><input></td>
-      <td><input></td>
-      <td><input></td>
-    </tr>
-
   </tbody>
 </table>
