@@ -8,7 +8,7 @@
 
 <table class="table table-warning table-striped table-hover">
   <thead>
-    <tr class="text-center table-primary">
+    <tr class="table-primary">
       <th scope="col">Id</th>
       <th scope="col">Paid</th>
       <th scope="col">Amount</th>
@@ -18,11 +18,37 @@
   </thead>
   <tbody>
     <tr *ngFor="let bill of bills">
-      <td><input type="text" [(ngModel)]="bill._id"></td>
-      <td><input type="checkbox" class="form-check-input" [(ngModel)]="bill.paid"></td>
-      <td><input [(ngModel)]="bill.amount"></td>
-      <td><input [(ngModel)]="bill.customer"></td>
-      <td><input [(ngModel)]="bill.created"></td>
+      <td>
+        <div class="form-group">
+          <label></label>
+          <input type="text" class="form-control id" [(ngModel)]="bill._id">
+        </div>
+      </td>
+      <td>
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="checkbox" class="form-check-input" [(ngModel)]="bill.paid">
+          </label>
+        </div>
+      </td>
+      <td>
+        <div class="form-group">
+          <label></label>
+          <input type="number" class="form-control amount" [(ngModel)]="bill.amount">
+        </div>
+      </td>
+      <td>
+        <div class="form-group">
+          <label></label>
+          <input type="text" class="form-control customer" [(ngModel)]="bill.customer">
+        </div>
+      </td>
+      <td>
+        <div class="form-group">
+          <label></label>
+          <input type="text" class="form-control created" [(ngModel)]="bill.created">
+        </div>
+      </td>
     </tr>
   </tbody>
 </table>
