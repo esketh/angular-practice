@@ -1,0 +1,21 @@
+input {
+    font-size: 12px;
+  }
+  
+  .form-check-input {
+    margin: 12px 2px 2px 2px;
+  }
+  
+  th {
+    text-align: center;
+  }
+  
+  td {
+    padding: 2px 10px 2px 10px;
+  }
+  
+  .id,
+  .form-string {
+    text-align: right;
+  }
+  
