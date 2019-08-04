@@ -21,32 +21,32 @@
       <td>
         <div class="form-group">
           <label></label>
-          <input type="text" class="form-control id" [(ngModel)]="bill._id">
+          <input type="text" class="form-control id" [(ngModel)]="bill._id" (change)="afterChange()">
         </div>
       </td>
       <td>
         <div class="form-check">
           <label class="form-check-label">
-            <input type="checkbox" class="form-check-input" [(ngModel)]="bill.paid">
+            <input type="checkbox" class="form-check-input" [(ngModel)]="bill.paid" (change)="afterChange()">
           </label>
         </div>
       </td>
       <td>
         <div class="form-group">
           <label></label>
-          <input type="number" class="form-control amount" [(ngModel)]="bill.amount">
+          <input type="number" class="form-control amount" [(ngModel)]="bill.amount" (change)="afterChange()">
         </div>
       </td>
       <td>
         <div class="form-group">
           <label></label>
-          <input type="text" class="form-control customer" [(ngModel)]="bill.customer">
+          <input type="text" class="form-control customer" [(ngModel)]="bill.customer" (change)="afterChange()">
         </div>
       </td>
       <td>
         <div class="form-group">
           <label></label>
-          <input type="text" class="form-control created" [(ngModel)]="bill.created">
+          <input type="text" class="form-control created" [(ngModel)]="bill.created" (change)="afterChange()">
         </div>
       </td>
     </tr>

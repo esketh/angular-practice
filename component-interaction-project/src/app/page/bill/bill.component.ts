@@ -14,7 +14,10 @@ export class BillComponent implements OnInit {
   md: MockData = new MockData();
   bills: Bill[] = this.md.bills;
 
-
+  afterChange() {
+    console.log(this.bills);
+  }
+  
   constructor() { }
 
   ngOnInit() {
