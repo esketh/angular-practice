@@ -7,7 +7,7 @@
        role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">Customer : {{modalData.customer}} </h5>
+        <h5 class="modal-title">Employee: {{ modalEmpData.name.first }} {{ modalEmpData.name.last }} </h5>
         <button (click)="hide()"
                 type="button"
                 class="close">
@@ -15,10 +15,15 @@
         </button>
       </div>
       <div class="modal-body">
-        <p>ID : {{modalData._id}} </p>
-        <p>Paid : {{modalData.paid}} </p>
-        <p>Amount : {{modalData.amount}} </p>
-        <p>Created : {{modalData.created}} </p>
+        <p>ID : {{ modalEmpData._id }} </p>
+        <p>isActive : {{ modalEmpData.isActive }} </p>
+        <p>Balance : {{ modalEmpData.balance }} </p>
+        <p>Age : {{ modalEmpData.age }} </p>
+        <p>Cmpany : {{ modalEmpData.company }} </p>
+        <p>Email : {{ modalEmpData.email }} </p>
+        <p>Address : {{ modalEmpData.address }} </p>
+        <p>Registered : {{ modalEmpData.registered }} </p>
+        
       </div>
       <div class="modal-footer">
         <button (click)="hide()"
@@ -30,3 +35,4 @@
     </div>
   </div>
 </div>
+

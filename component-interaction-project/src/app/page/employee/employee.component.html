@@ -1,1 +1,75 @@
-<p>employee works!</p>
+<div class="container container-mod">
+
+  <table class="table table-striped table-dark table-responsive">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>isActive</th>
+        <th>Balance</th>
+        <th>Age</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Company</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Address</th>
+        <th>Registered</th>
+        <th>Show</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employee of employees">
+        <td> <input [(ngModel)]="employee._id"
+                 type="text"
+                 value="{{employee._id}}"
+                 (change)="afterChange()"> </td>
+        <td> <input [(ngModel)]="employee.isActive"
+                 type="checkbox"
+                 value="{{employee.isActive}}"
+                 (change)="afterChange()"> </td>
+        <td> <input [(ngModel)]="employee.balance"
+                 type="text"
+                 value="{{employee.balance}}"
+                 (change)="afterChange()"> </td>
+        <td> <input [(ngModel)]="employee.age"
+                 type="number"
+                 value="{{employee.age}}"
+                 (change)="afterChange()"> </td>
+        <td> <input [(ngModel)]="employee.name.first"
+                 type="text"
+                 value="{{employee.name.first}}"
+                 (change)="afterChange()"> </td>
+        <td> <input [(ngModel)]="employee.name.last"
+                 type="text"
+                 value="{{employee.name.last}}"
+                 (change)="afterChange()"> </td>
+        <td> <input [(ngModel)]="employee.company"
+                 type="text"
+                 value="{{employee.company}}"
+                 (change)="afterChange()"> </td>
+        <td> <input [(ngModel)]="employee.email"
+                 type="text"
+                 value="{{employee.email}}"
+                 (change)="afterChange()"> </td>
+        <td> <input [(ngModel)]="employee.phone"
+                 type="text"
+                 value="{{employee.phone}}"
+                 (change)="afterChange()"> </td>
+        <td> <input [(ngModel)]="employee.address"
+                 type="text"
+                 value="{{employee.address}}"
+                 (change)="afterChange()"> </td>
+        <td> <input [(ngModel)]="employee.registered"
+                 type="text"
+                 value="{{employee.registered}}"
+                 (change)="afterChange()"> </td>
+        <td><button 
+                  (click)="showModal(employee)"
+                  class="btn btn-primary btn-md">Show Data</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <app-modal-emp [modalEmpData]="employeeDataForModal" [showEmpCounter]="modalCounter"></app-modal-emp>
+
+</div>

@@ -3,13 +3,15 @@ import { Routes, RouterModule } from '@angular/router';
 import { IndexComponent } from './page/index/index.component';
 import { EmployeeComponent } from './page/employee/employee.component';
 import { BillComponent } from './page/bill/bill.component';
+import { QuizComponent } from './page/quiz/quiz.component';
 
 
 const routes: Routes = [
-  {path: "", component: IndexComponent},
-  {path: "employee", component: EmployeeComponent},
-  {path: "bill", component: BillComponent},
-  {path: "**", component: IndexComponent},
+  { path: "", component: IndexComponent },
+  { path: "employee", component: EmployeeComponent },
+  { path: "bill", component: BillComponent },
+  { path: "quiz", component: QuizComponent },
+  { path: "**", component: IndexComponent },
 ];
 
 @NgModule({

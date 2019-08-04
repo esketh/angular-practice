@@ -2,17 +2,17 @@ import { Component, OnInit, Input } from '@angular/core';
 
 
 @Component({
-  selector: 'app-modal',
-  templateUrl: './modal.component.html',
-  styleUrls: ['./modal.component.css']
+  selector: 'app-modal-emp',
+  templateUrl: './modal-emp.component.html',
+  styleUrls: ['./modal-emp.component.css']
 })
-export class ModalComponent implements OnInit {
+export class ModalEmpComponent implements OnInit {
   
 
   /**
    * Az adatok, amelyek megjelennek a modális ablakban.
    */
-  @Input() modalData: any = {};
+  @Input() modalEmpData: any = {};
   
   
 
@@ -20,7 +20,7 @@ export class ModalComponent implements OnInit {
    * Ha a showCounter property változik, akkor fut le a setter.
    * Amennyiben a számláló nem 0, akkor megjeleníti az ablakot.
    */
-  @Input() set showCounter(counter) {
+  @Input() set showEmpCounter(counter) {
     console.log(counter);
     if (counter > 0) {
       this.show();
