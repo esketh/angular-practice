@@ -12,13 +12,23 @@
 
 <div class="container ">
   <div class="row justify-content-center">
-    <div class="col-12 col-md-5 dashboard-icon-1 bg-primary">
-      <div class="dashboard-header">
-        Current number of employees: {{employeeData.length}}
-      </div>
-      <hr class="margin-bottom--none">
-      <div class="dashboard-link">
+    <div class="col-12 col-md-5 dashboard-icon-1">
 
+      <div class="row">
+        <div class="col-12 col-md-6">
+          <div class="dashboard-header">
+            Current number of <br> employees: {{employeeData.length}}
+          </div>
+        </div>
+        <div class="col-12 col-md-6 text-right dashboard-pic">
+          <img src="/assets/employees.png"
+               alt="employees">
+        </div>
+      </div>
+
+      <hr class="margin-bottom--none">
+
+      <div class="dashboard-link">
         <a class="nav-link"
            routerLink="/employee">
           <div class="row ">
@@ -27,16 +37,26 @@
           </div>
         </a>
       </div>
-
     </div>
 
     <div class="col-12 col-md-5 dashboard-icon-2 bg-warning">
-      <div class="dashboard-header">
-        Current number of bills: {{billData.length}}
-      </div>
-      <hr class="margin-bottom--none">
-      <div class="dashboard-link">
 
+      <div class="row">
+
+        <div class="col-12 col-md-6">
+          <div class="dashboard-header">
+            Current number of <br> bills: {{billData.length}}
+          </div>
+        </div>
+        <div class="col-12 col-md-6 text-right dashboard-pic">
+          <img src="/assets/tax.png"
+               alt="bills">
+        </div>
+      </div>
+
+      <hr class="margin-bottom--none">
+
+      <div class="dashboard-link">
         <a class="nav-link"
            routerLink="/bill">
           <div class="row">
