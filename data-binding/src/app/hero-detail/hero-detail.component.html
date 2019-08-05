@@ -3,7 +3,7 @@
         <h3>Selected Hero</h3>
     </div>
     <div class="card-body">
-            <ul [appHighlight="'blue'"]>
+            <ul [appHighlight]="'blue'">
                     <li>
                         <p *appDelay="5000" class="card-text">{{ hero.name | prefix:'Herr.' }}</p>
                     </li>

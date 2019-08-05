@@ -29,7 +29,7 @@ changeColor(color: string): void{
   this.el.nativeElement.style.backgroundColor = color;
 }
 
-@Input() set appHighlight(color) {
+@Input() set appHighlight(color: string) {
   this.changeColor(color);
 }
 
