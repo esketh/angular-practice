@@ -12,13 +12,15 @@ export class BillComponent implements OnInit {
   title = "Bills";
 
   md: MockData = new MockData();
-  bills: Bill[] = this.md.bills;
+  bill: Bill[] = [];
 
   afterChange() {
-    console.log(this.bills);
+    console.log(this.bill);
   }
   
-  constructor() { }
+  constructor() {
+    this.bill = this.md.bills;
+   }
 
   ngOnInit() {
   }
