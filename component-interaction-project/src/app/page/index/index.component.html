@@ -1,18 +1,75 @@
-<div class="container">
-  <div class="row text-align-center">
-    <div class="col ">
-      <h2>No. of employees</h2>
-      <h2>{{ employees.length }}</h2>      
-    </div>
-    <div class="col">
-      <h2>No. of bills</h2>
-      <h2> {{ bills.length}} </h2>
+<head>
+  <title>{{title}}</title>
+</head>
+
+<div class="container ">
+  <div class="row">
+    <div class="col-12 text-center">
+      <h1>{{title}}</h1>
     </div>
   </div>
 </div>
 
+<div class="container ">
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-5 dashboard-icon-1">
+
+      <div class="row">
+        <div class="col-12 col-md-6">
+          <div class="dashboard-header">
+            Current number of <br> employees: {{employeeData.length}}
+          </div>
+        </div>
+        <div class="col-12 col-md-6 text-right dashboard-pic">
+          <img src="/assets/employees.png"
+               alt="employees">
+        </div>
+      </div>
+
+      <hr class="margin-bottom--none">
+
+      <div class="dashboard-link">
+        <a class="nav-link"
+           routerLink="/employee">
+          <div class="row ">
+            <div class="col-12 col-md-6 text-left no-padding">View Details</div>
+            <div class="col-12 col-md-6 text-right no-padding">></div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-5 dashboard-icon-2 bg-warning">
+
+      <div class="row">
+
+        <div class="col-12 col-md-6">
+          <div class="dashboard-header">
+            Current number of <br> bills: {{billData.length}}
+          </div>
+        </div>
+        <div class="col-12 col-md-6 text-right dashboard-pic">
+          <img src="/assets/tax.png"
+               alt="bills">
+        </div>
+      </div>
+
+      <hr class="margin-bottom--none">
+
+      <div class="dashboard-link">
+        <a class="nav-link"
+           routerLink="/bill">
+          <div class="row">
+            <div class="col-12 col-md-6 text-left no-padding">View Details</div>
+            <div class="col-12 col-md-6 text-right no-padding">></div>
+          </div>
+        </a>
+      </div>
 
 
+    </div>
+  </div>
+</div>
 
 
 <!-- 
