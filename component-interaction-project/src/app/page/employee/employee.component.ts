@@ -22,4 +22,8 @@ export class EmployeeComponent implements OnInit {
   ngOnInit() {
   }
 
+  afterChange() {
+    console.log(this.employees);
+  }
+
 }
