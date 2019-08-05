@@ -23,44 +23,44 @@
         <td>
           <div class="form-group">
             <label></label>
-            <input type="text" class="form-control id" [(ngModel)]="employee._id">
+            <input type="text" class="form-control id" [(ngModel)]="employee._id" (change)="afterChange()">
           </div>
         </td>
         <td>
           <div class="form-check">
             <label class="form-check-label">
-              <input type="checkbox" class="form-check-input" [(ngModel)]="employee.isActive">
+              <input type="checkbox" class="form-check-input" [(ngModel)]="employee.isActive" (change)="afterChange()">
             </label>
           </div>
         </td>
         <td>
           <div class="form-group">
             <label></label>
-            <input type="number" class="form-control form-string" [(ngModel)]="employee.name">
+            <input type="number" class="form-control form-string" [(ngModel)]="employee.name" (change)="afterChange()">
           </div>
         </td>
         <td>
           <div class="form-group">
             <label></label>
-            <input type="text" class="form-control form-string" [(ngModel)]="employee.company">
+            <input type="text" class="form-control form-string" [(ngModel)]="employee.company" (change)="afterChange()">
           </div>
         </td>
         <td>
           <div class="form-group">
             <label></label>
-            <input type="text" class="form-control form-string" [(ngModel)]="employee.email">
+            <input type="text" class="form-control form-string" [(ngModel)]="employee.email" (change)="afterChange()">
           </div>
         </td>
         <td>
             <div class="form-group">
               <label></label>
-              <input type="text" class="form-control form-string" [(ngModel)]="employee.phone">
+              <input type="text" class="form-control form-string" [(ngModel)]="employee.phone" (change)="afterChange()">
             </div>
           </td>
           <td>
             <div class="form-group">
               <label></label>
-              <input type="text" class="form-control form-string" [(ngModel)]="employee.address">
+              <input type="text" class="form-control form-string" [(ngModel)]="employee.address" (change)="afterChange()">
             </div>
           </td>        
       </tr>

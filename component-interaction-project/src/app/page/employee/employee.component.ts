@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Employee } from 'src/app/model/employee';
 import { MockData } from 'src/app/model/mock-data';
 
+
 @Component({
   selector: 'app-employee',
   templateUrl: './employee.component.html',
@@ -19,6 +20,10 @@ export class EmployeeComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+
+  afterChange() {
+    console.log(this.employees);
   }
 
 }

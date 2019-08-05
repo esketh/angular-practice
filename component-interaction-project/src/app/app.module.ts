@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,6 +11,7 @@ import { QuizComponent } from './page/quiz/quiz.component';
 import { NavComponent } from './page/nav/nav.component';
 import { BillComponent } from './page/bill/bill.component';
 import { ModalComponent } from './modal/modal.component';
+import { ModalEmpComponent } from './modal-emp/modal-emp.component';
 
 @NgModule({
   declarations: [
@@ -20,13 +21,14 @@ import { ModalComponent } from './modal/modal.component';
     QuizComponent,
     NavComponent,
     BillComponent,
-    ModalComponent
+    ModalComponent,
+    ModalEmpComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    AngularFontAwesomeModule
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
