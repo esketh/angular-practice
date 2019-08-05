@@ -3,15 +3,15 @@
         <h3>Selected Hero</h3>
     </div>
     <div class="card-body">
-            <ul>
+            <ul [appHighlight="'blue'"]>
                     <li>
-                        <p class="card-text">{{ hero.name | prefix:'Herr.' }}</p>
+                        <p *appDelay="5000" class="card-text">{{ hero.name | prefix:'Herr.' }}</p>
                     </li>
                     <li>
-                        <p class="card-text">{{ hero.address }}</p>
+                        <p *appDelay="7500" class="card-text">{{ hero.address }}</p>
                     </li>
                     <li>
-                        <p class="card-text">{{ hero.superpower }}</p>
+                        <p *appDelay="10000" class="card-text">{{ hero.superpower }}</p>
                     </li>
                 </ul>
     </div>
