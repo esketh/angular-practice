@@ -11,6 +11,7 @@ import { QuizComponent } from './page/quiz/quiz.component';
 import { NavComponent } from './page/nav/nav.component';
 import { BillComponent } from './page/bill/bill.component';
 import { ModalComponent } from './modal/modal.component';
+import { ModalEmpComponent } from './modal-emp/modal-emp.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ModalComponent } from './modal/modal.component';
     QuizComponent,
     NavComponent,
     BillComponent,
-    ModalComponent
+    ModalComponent,
+    ModalEmpComponent
   ],
   imports: [
     BrowserModule,
