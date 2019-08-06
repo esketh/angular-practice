@@ -10,8 +10,12 @@ export class HeroService {
   jsonUrl: string = "http://localhost:3000/heroes";
   constructor(private http: HttpClient) { }
 
-getAll(): Observable<Hero> {
-  return this.http.get<Hero>(this.jsonUrl);
+getAll(): Observable<Hero[]> {
+  return this.http.get<Hero[]>(this.jsonUrl);
+}
+
+getOne(id: string | number): Observable<Hero>  {
+  return this.http.get<Hero>(`${this.jsonUrl}/${id}`);
 }
 
 }
