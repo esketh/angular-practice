@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Hero } from './model/hero';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -15,6 +16,8 @@ export class AppComponent {
   { name: "Magneto", address: "NYC", superpower: "magnetic"},
   ];
 
+  listObservable: Observable<any>;
+
   selectedHero: Hero = this.heroes[0];
 
   selectHero(hero : Hero): void {
@@ -28,7 +31,7 @@ export class AppComponent {
   //   name: 'Magneto',
   //   address: 'NYC',
   //   superpower: 'magnetic'
-  };
+  // };
 
   // getName():string {
   //   return `Bond, James Bond`;
@@ -43,16 +46,32 @@ export class AppComponent {
 // name: string;
 // disabled: boolean = false;
 
-// constructor() {
+constructor() {
+this.listObservable = new Observable( observer => {
+  let to = setTimeout( () => {
+    observer.next('Megjöttem...');
+  }, 15000);
+
+  let to2 = setTimeout( () => {
+    observer.complete();
+  }, 20000);
+});
+
+this.listObservable.subscribe(
+  value => console.log(value),
+  error => console.error(error),
+  () => console.log('complete')
+);
+
 //   this.name = this.names[0];
 //   setInterval( () => {
 //     let index: number = Math.floor(Math.random()*this.names.length);
 //     this.name = this.names[index];
 //     this.disabled = !this.disabled;
 //   }, 2000);
-// }
+}
 
 // setName(name): void {
 //   this.name = name;
 //   }
-// }
+}
