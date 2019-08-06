@@ -1,0 +1,24 @@
+{
+    "heroes": [
+        { 
+            "name": "Bombasto", 
+            "address": "NYC", 
+            "superpower": "can explode" 
+        },
+        { 
+            "name": "Iceman", 
+            "address": "LA", 
+            "superpower": "can froze" 
+        },
+        { 
+            "name": "Captain Planet", 
+            "address": "Budapest", 
+            "superpower": "homoalcoholicus" 
+        },
+        { 
+            "name": "Magneto", 
+            "address": "NYC", 
+            "superpower": "magnetic"
+        }
+    ]
+}
