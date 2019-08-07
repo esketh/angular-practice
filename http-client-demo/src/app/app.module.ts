@@ -5,10 +5,12 @@ import { FormsModule } from '@angular/forms'
 
 import { AppComponent } from './app.component';
 import { from } from 'rxjs';
+import { FilterPipe } from './pipe/filter.pipe';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,

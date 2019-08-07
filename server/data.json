@@ -41,6 +41,18 @@
       "title": "Kill Bill",
       "release": 2003,
       "actor": "Uma Thurman"
+    },
+    {
+      "title": "Titanic",
+      "release": "1998",
+      "actor": "Leonardo diCaprio",
+      "id": 8
+    },
+    {
+      "title": "The Shawshank Redemption",
+      "release": "1994",
+      "actor": "Tim Robbins",
+      "id": 9
     }
   ]
 }

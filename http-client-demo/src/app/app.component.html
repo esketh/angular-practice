@@ -1,6 +1,12 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="container-fluid">
   <h1>Films</h1>
+<div class="row">
+  <div class="col-4">
+    <input [(ngModel)]="filterPhrase" type="text" class="form-control">
+  </div>
+</div>
+
   <div class="row">
     <div class="col-12">
       <div class="table table-striped">
@@ -14,7 +20,22 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let film of filmList">
+            <tr>
+                <th></th>
+                <th>
+                  <input [(ngModel)]="newFilm.title" type="text" class="form-controll">
+                </th>
+                <th>
+                    <input [(ngModel)]="newFilm.release" type="text" class="form-controll">
+                </th>
+                <th>
+                    <input [(ngModel)]="newFilm.actor" type="text" class="form-controll">
+                </th>
+                <th>
+                  <button class="btn btn-success" (click)="onCreate()">Add</button>
+                </th>
+              </tr>
+          <tr *ngFor="let film of filmList | filter: filterPhrase">
             <td>{{ film.id }}</td>
             <td>
               <input [(ngModel)]="film.title" type="text" class="form-control">

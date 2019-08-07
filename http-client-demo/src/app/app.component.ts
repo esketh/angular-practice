@@ -9,8 +9,8 @@ import { Film } from './model/film';
 })
 export class AppComponent implements OnInit {
   title = 'http-client-demo';
-
   filmList: Film[] = [];
+  newFilm: Film = new Film;
 
   constructor(
     private filmService: FilmService
@@ -21,6 +21,16 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.filmService.getAll().subscribe(
       films => this.filmList = films
+    )
+  }
+
+  onCreate() {
+    this.filmService.create(this.newFilm).subscribe(
+      film => {
+        this.filmList.push(film);
+        this.newFilm = new Film();
+      },
+      err => console.error(err)
     )
   }
 
