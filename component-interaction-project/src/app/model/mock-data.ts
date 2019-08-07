@@ -4,15 +4,16 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
 @Injectable({
-    providedIn: 'root',
-   })
+  providedIn: 'root'
+})
 export class MockData {
 
-    // employee$: Observable<Employee[]> = new Observable ( (observer) => {
-    //     setInterval( () => {
-    //         observer.next(this.employee[index]);
-    //     } 2000);
-    // });
+    employee$: Observable<Employee[]> = new Observable( (observer) => {
+      setInterval( () => {
+        let index = Math.floor(Math.random()*this.employee.length);
+        observer.next([this.employee[index]]);
+      }, 2000);
+    });
 
     employee: Employee[] = [
         {
