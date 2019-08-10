@@ -23,15 +23,30 @@ export class FilmService {
   }
 
   create(film: Film): Observable<Film> {
-    return this.http.post<Film>(this.jsonUrl, film);
+  //   return this.http.post<Film>(this.jsonUrl, film);
+  // }
+
+  // update(film: Film): Observable<Film> {
+  //   return this.http.put<Film>(`${this.jsonUrl}/${film.id}`, film);
+  // }
+
+  // remove(id: number): Observable<Film> {
+  //   return this.http.delete<Film>(`${this.jsonUrl}/${id}`);
+    return this.http.post<Film>(
+      this.jsonUrl,
+      film
+    );
   }
 
   update(film: Film): Observable<Film> {
-    return this.http.put<Film>(`${this.jsonUrl}/${film.id}`, film);
+    return this.http.put<Film>(
+      `${this.jsonUrl}/${film.id}`,
+      film
+    );
   }
 
-  remove(id: number): Observable<Film> {
-    return this.http.delete<Film>(`${this.jsonUrl}/${id}`);
+  remove(id: number): Observable<any> {
+    return this.http.delete(`${this.jsonUrl}/${id}`);
   }
 
 }
