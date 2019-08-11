@@ -1,1 +1,37 @@
-<p>index works!</p>
+<div class="container ">
+        <div class="row">
+          <div class="col-12 text-center">
+            <h1>{{ title }}</h1>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+            <div class="col-sm-4">
+              <div class="card text-white bg-info">
+                <div class="card-body">
+                  <h5 class="card-title">Number of users</h5>
+                  <p class="card-text">Active users: {{ IndexComponent.countActive() }}</p>
+                  <p class="card-text">Not active users: {{ IndexComponent.countNotActive()}}</p>
+                  <a routerLink="/users" class="btn btn-primary">More detail</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="card text-white bg-warning">
+                <div class="card-body">
+                  <h5 class="card-title">Sum balance of users</h5>
+                  <p class="card-text"></p>
+                  <a routerLink="/users" class="btn btn-primary">More detail</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+                    <div class="card text-white bg-success">
+                      <div class="card-body">
+                        <h5 class="card-title">Users who prefer apple</h5>
+                        <p class="card-text"></p>
+                        <a routerLink="/users" class="btn btn-primary">More detail</a>
+                      </div>
+                    </div>
+                  </div>
+          </div>
