@@ -1,1 +1,50 @@
-<p>users works!</p>
+<div class="container-fluid">
+  <h1>Films</h1>
+<div class="row">
+  <div class="col-4">
+    <input [(ngModel)]="filterPhrase" type="text" class="form-control">
+  </div>
+  <div class="col-2">
+        <a class="btn btn-success" routerLink="/users-new" target="_blank">New user</a>
+  </div>
+</div>
+
+  <div class="row">
+    <div class="col-12">
+      <table class="table table-striped" matSort (matSortChange)="userList($event)">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th mat-sort-header="name.first">First name</th>
+            <th mat-sort-header="name.last">Last name</th>
+            <th mat-sort-header="email">Email</th>
+            <th mat-sort-header="phone">Phone</th>
+            <th>Active</th>
+            <th>Age</th>
+            <th>Commands</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of userList | filter: filterPhrase">
+                      <tbody>
+                        <tr>
+                            <td>{{ user.id }}</td>
+                            <td>{{ user.name.first }}</td>
+                            <td>{{ user.name.last }}</td>
+                            <td>{{ user.email }}</td>
+                            <td>{{ user.phone }}</td>
+                            <td>{{ user.isActive }}</td>
+                            <td>{{ user.age }}</td>
+                            <td>
+                        <div class="btn-group">
+                            <a class="btn btn-success" routerLink="/users-edit/:id" target="_blank">Edit</a>
+                              <button class="btn btn-danger" (click)="onDelete(user)">delete</button>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              

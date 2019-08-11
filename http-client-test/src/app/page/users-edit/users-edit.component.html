@@ -1,1 +1,17 @@
-<p>users-edit works!</p>
+<div class="container-fluid">
+        <h1>Edit user</h1>
+          <mat-form-field class="input-group mb-3">
+                <input matInput placeholder="First name:" [(ngModel)]="user.name.first" type="text" class="form-controll" 
+                value="{{ this.user.name.first}}"><br>
+                <input matInput placeholder="Last name:" [(ngModel)]="user.name.last" type="text" class="form-controll" 
+                value="{{ this.user.name.last}}"><br>
+                <input matInput placeholder="Active:" [(ngModel)]="user.isActive" type="checkbox" class="form-controll" value="{{ this.user.isActive}}"><br>
+                <input matInput placeholder="Age:" [(ngModel)]="user.age" type="text" class="form-controll" 
+                value="{{ this.user.age }}"><br>
+                <input matInput placeholder="Email:" [(ngModel)]="user.email" type="text" class="form-controll" 
+                value="{{ this.user.email }}"><br>
+                <input matInput placeholder="Phone:" [(ngModel)]="user.phone" type="text" class="form-controll" 
+                value="{{ this.user.phone }}"><br>
+                <button class="btn btn-success" (click)="onCreate()">Save</button>
+            </mat-form-field>
+    </div>

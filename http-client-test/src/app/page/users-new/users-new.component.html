@@ -1,1 +1,18 @@
-<p>users-new works!</p>
+<div class="container-fluid">
+    <h1>New user</h1>
+ <div class="input-group mb-3">
+                <label for="firstName">First name:</label>
+                <input [(ngModel)]="newUser.name.first" type="text" class="form-controll" id="firstName"><br>
+                <label for="lastName">Last name:</label>
+                <input [(ngModel)]="newUser.name.last" type="text" class="form-controll" id="lastName"><br>
+                <label for="active">Active</label>
+                <input [(ngModel)]="newUser.isActive" type="checkbox" class="form-controll" id="active"><br>
+                <label for="age">Age</label>
+                <input [(ngModel)]="newUser.age" type="text" class="form-controll" id="age"><br>
+                <label for="email">Email</label>
+                <input [(ngModel)]="newUser.email" type="text" class="form-controll" id="email"><br>
+                <label for="phone">Phone</label>
+                <input [(ngModel)]="newUser.phone" type="text" class="form-controll" id="phone"><br>
+                <button class="btn btn-success" (click)="onCreate()">Add</button>
+ </div>
+</div>

@@ -55,27 +55,6 @@ export class UsersComponent implements OnInit {
       err => console.error(err)
     )
   }
-
-  onUpdate(user: any) {
-    this.userService.update(user).subscribe(
-      response => {
-        this.changeCounter++;
-      },
-      err => console.error(err)
-    )
-  }
-
-  onCreate(){
-    this.userService.create(this.newUser).subscribe(
-      user => {
-        this.userList.push(user);
-        this.newUser = new User();
-        this.changeCounter++;
-      },
-      err => console.error(err)
-    );
-  }
-
 }
 
 function compare(a: number | string, b: number | string, isAsc: boolean) {
