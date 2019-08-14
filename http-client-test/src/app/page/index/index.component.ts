@@ -30,7 +30,7 @@ export class IndexComponent implements OnInit {
 
   countNotActive() {
     this.userService.getAll().subscribe(
-      count => this.userList.reduce((a, c) => c.isActive ? 0 : ++a, 0)
+      count => this.userList.reduce((a, c) => !c.isActive ? ++a : a, 0)
       ) 
   }
 
